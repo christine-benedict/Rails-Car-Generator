@@ -1,0 +1,19 @@
+<h3><%= @car.getStatus %> </h3>
+
+<form action ="accelerate" method ="get">
+    <input type ="submit"  value="Accelerate" />
+</form>
+
+<form action ="brake" method ="get">
+    <input type ="submit"  value="Brake" />
+</form>
+
+<form action ="lightstoggle" method ="get">
+    <input type ="submit"  value="Toggle Lights" />
+</form>
+
+<form action ="parkingbraketoggle" method ="get">
+    <input type ="radio" name="parkingbrake" id="on" value="on"/><label for = "on">On</label>
+    <input type ="radio" name="parkingbrake" id="off" value="off"/><label for = "off">Off</label>
+    <input type ="submit" value="Set Parking Brake" />
+</form>
