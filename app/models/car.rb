@@ -1,6 +1,6 @@
 class Car
     attr_accessor :parkingbrake
-    
+    attr_reader :speed
     def initialize(make, modelyear)
         @make = make
         @modelyear = modelyear
@@ -22,7 +22,9 @@ class Car
     end
 
     def accelerate
-        @speed = @speed + 10
+        if @parkingbrake == "off"
+            @speed = @speed + 10
+        end
     end
 
     def brake

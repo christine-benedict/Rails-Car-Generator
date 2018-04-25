@@ -38,7 +38,9 @@ class CarsController < ApplicationController
 
   def parkingbraketoggle
       @car = YAML.load(session[:car])
-      @car.parkingbrake = params[:parkingbrake]
+      if @car.speed == 0
+          @car.parkingbrake = params[:parkingbrake]
+      end
       session[:car] = @car.to_yaml
       render 'status'
   end
