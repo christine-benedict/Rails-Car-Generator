@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'cars' => 'cars#create'
   get 'cars/create'
   get 'cars/status'
   get 'cars/accelerate'
