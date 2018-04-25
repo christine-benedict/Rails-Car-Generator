@@ -4,7 +4,7 @@ class CarsController < ApplicationController
       if params.has_key?(:make) && !params[:make].strip.empty? && params.has_key?(:modelyear) && !params[:modelyear].strip.empty?
           # cookies[:make] = params[:make]
           # cookies[:modelyear] = params[:modelyear]
-          car = Car.new(params[:make], params[:modelyear])
+          car = Car.new(params[:make], params[:modelyear], params[:color])
           session[:car] = car.to_yaml
           redirect_to "/cars/status"
       else
