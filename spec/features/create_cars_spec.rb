@@ -41,6 +41,19 @@ RSpec.feature "CreateCars", type: :feature do
                 click_button 'Accelerate'
                 expect(page).to have_content('Speed: 10')
             end
+            Then 'I can click the brake button to decrease speed by 7' do
+                click_button 'Brake'
+                expect(page).to have_content('Speed: 3')
+            end
+            Then "If speed is greater than zero, I cannot set the parking brake" do
+                choose('on')
+                click_button "Set Parking Brake"
+                expect(page).to have_content('Parking Brake: off')
+            end
+            Then 'I can click the toggle lights button to turn the lights on' do
+                click_button 'Toggle Lights'
+                expect(page).to have_content('Lights: on')
+            end
         end
     end
 end
