@@ -1,4 +1,12 @@
-<h3 style="color:<%= @car.color %>"><%= @car.getStatus %> </h3>
+<h3>
+    <ul style="list-style-type: none">
+        <li style="color:<%= @car.color %>">Make: <%= @car.make %></li>
+        <li>Modelyear: <%= @car.modelyear %></li>
+        <li>Speed: <%= @car.speed%></li>
+        <li>Lights: <%= @car.lights %></li>
+        <li>Parking Brake: <%= @car.parkingbrake %></li>
+    </ul>
+</h3>
 <hr />
 <br />
 

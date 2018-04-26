@@ -1,6 +1,6 @@
 class Car
     attr_accessor :parkingbrake
-    attr_reader :speed, :color
+    attr_reader :speed, :color, :make, :modelyear, :lights
     def initialize(make, modelyear, color)
         @make = make
         @modelyear = modelyear
@@ -8,18 +8,6 @@ class Car
         @lights = "off"
         @parkingbrake = "on"
         @color = color
-    end
-
-    # def make = new_make
-    #     @make = new_make
-    # end
-    #
-    # def modelyear = new_modelyear
-    #     @modelyear = new_modelyear
-    # end
-
-    def getStatus
-        "Make: #{@make} Modelyear: #{@modelyear} Speed: #{@speed} Lights: #{@lights} Parking Brake: #{@parkingbrake}"
     end
 
     def accelerate
