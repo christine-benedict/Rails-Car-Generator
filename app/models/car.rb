@@ -6,7 +6,7 @@ class Car
         @modelyear = modelyear
         @speed = 0
         @lights = "off"
-        @parkingbrake = "on"
+        @parkingbrake = "Set"
         @color = color
     end
 
